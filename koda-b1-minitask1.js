@@ -10,8 +10,15 @@ const student = [
 // indexof
 console.log(student.indexOf("Afif"));
 
+
 // manual indexof
-function namaStudent(nama) {
+function nama(input, callback) {
+  return callback(input);
+}
+
+nama("Afif", temukan);
+
+function temukan(nama) {
   for (let i = 0; i < student.length; i++) {
     if (nama === student[i]) {
       console.log(`${student[i]} Index ke-${i}`);
@@ -21,4 +28,3 @@ function namaStudent(nama) {
     }
   }
 }
-namaStudent("Afif");
