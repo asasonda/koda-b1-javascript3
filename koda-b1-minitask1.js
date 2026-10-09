@@ -11,12 +11,14 @@ const student = [
 console.log(student.indexOf("Afif"));
 
 // manual indexof
-const seacrhIndex = "Afif";
-for (let i = 0; i < student.length; i++) {
-  if (seacrhIndex === student[i]) {
-    console.log(`${student[i]} Index ke-${i}`);
-    break;
-  } else {
-    console.log("Data tidak ditemukan");
+function namaStudent(nama) {
+  for (let i = 0; i < student.length; i++) {
+    if (nama === student[i]) {
+      console.log(`${student[i]} Index ke-${i}`);
+      break;
+    } else {
+      console.log("Data tidak ditemukan");
+    }
   }
 }
+namaStudent("Afif");
