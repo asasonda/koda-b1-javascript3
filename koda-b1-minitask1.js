@@ -11,14 +11,17 @@ const student = [
 console.log(student.indexOf("Afif"));
 
 // manual indexof
-function namaStudent(nama) {
-  for (let i = 0; i < student.length; i++) {
-    if (nama === student[i]) {
-      console.log(`${student[i]} Index ke-${i}`);
-      break;
-    } else {
-      console.log("Data tidak ditemukan");
-    }
-  }
+function nama(input, callback) {
+  return callback(input);
 }
-namaStudent("Afif");
+
+function temukan(nama) {
+    const pelajar = [...student]
+    for (let i = 0; i < pelajar.length; i++) {
+        if (nama === pelajar[i]) {
+            console.log(`${pelajar[i]} Index ke-${i}`);
+            return;
+        }
+    }
+}
+nama("Bando", temukan);
