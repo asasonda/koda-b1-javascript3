@@ -14,7 +14,7 @@ console.log(student.indexOf("Afif"));
 const seacrhIndex = "Afif";
 for (let i = 0; i < student.length; i++) {
   if (seacrhIndex === student[i]) {
-    console.log(`Afif Index ke-${i}`);
+    console.log(`${student[i]} Index ke-${i}`);
     break;
   } else {
     console.log("Data tidak ditemukan");
