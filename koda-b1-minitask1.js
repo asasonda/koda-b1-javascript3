@@ -16,8 +16,6 @@ function nama(input, callback) {
   return callback(input);
 }
 
-nama("Afif", temukan);
-
 function temukan(nama) {
   for (let i = 0; i < student.length; i++) {
     if (nama === student[i]) {
@@ -28,3 +26,5 @@ function temukan(nama) {
     }
   }
 }
+
+nama("Afif", temukan);
