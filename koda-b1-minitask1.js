@@ -16,12 +16,11 @@ function nama(input, callback) {
 }
 
 function temukan(nama) {
-    const pelajar = [...student]
-    for (let i = 0; i < pelajar.length; i++) {
-        if (nama === pelajar[i]) {
-            console.log(`${pelajar[i]} Index ke-${i}`);
+    for (let i = 0; i < student.length; i++) {
+        if (nama === student[i]) {
+            console.log(`${student[i]} Index ke-${i}`);
             return;
         }
     }
 }
-nama("Bando", temukan);
+nama("Rifai", temukan);
