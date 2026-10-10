@@ -1,28 +1,23 @@
 const url = "https://jsonplaceholder.typicode.com/users";
 
-function lowerString(string) {
-  let stringArray = string;
+function lowerString(stringIndexEmail) {
+  let hurufBesar = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  let hurufKecil = "abcdefghijklmnopqrstuvwxyz";
   let emailLower = "";
-  for (let p = 0; p < stringArray.length; p++) {
-    let huruf = stringArray[p];
-    if (p === 0) {
-      if (huruf === "S") {
-        huruf = "s";
-      } else if (huruf === "N") {
-        huruf = "n";
-      } else if (huruf === "J") {
-        huruf = "j";
-      } else if (huruf === "L") {
-        huruf = "l";
-      } else if (huruf === "K") {
-        huruf = "k";
-      } else if (huruf === "T") {
-        huruf = "t";
-      } else if (huruf === "C") {
-        huruf = "c";
+
+  for (let p = 0; p < stringIndexEmail.length; p++) {
+    let huruf = stringIndexEmail[p];
+    let kaloKetemu = false;
+    for (let j = 0; j < hurufBesar.length; j++) {
+      if (huruf === hurufBesar[j]) {
+        emailLower += hurufKecil[j];
+        kaloKetemu = true;
+        break;
       }
     }
-    emailLower += huruf;
+    if (kaloKetemu === false) {
+      emailLower += huruf;
+    }
   }
   console.log(emailLower);
 }
@@ -45,11 +40,13 @@ async function users() {
     api.forEach((tes) => {
       arrayBaru.push(tes.email);
     });
+
     // lower case tanpa built-in method
     console.log(arrayEmails);
     for (let y = 0; y < arrayEmails.length; y++) {
       lowerString(arrayEmails[y]);
     }
+
   } catch (err) {
     console.error("err");
   }
