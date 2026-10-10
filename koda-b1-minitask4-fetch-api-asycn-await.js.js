@@ -42,7 +42,7 @@ async function users() {
     });
 
     // lower case tanpa built-in method
-    console.log(arrayEmails);
+    // console.log(arrayEmails);
     for (let y = 0; y < arrayEmails.length; y++) {
       lowerString(arrayEmails[y]);
     }
